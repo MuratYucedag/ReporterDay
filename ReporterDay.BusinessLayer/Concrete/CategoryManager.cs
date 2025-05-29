@@ -24,6 +24,12 @@ namespace ReporterDay.BusinessLayer.Concrete
         {
             return _categoryDal.GetById(id);
         }
+
+        public int TGetCategoryCount()
+        {
+            return _categoryDal.GetCategoryCount();
+        }
+
         public List<Category> TGetListAll()
         {
             //if(yetkisi var mı)
