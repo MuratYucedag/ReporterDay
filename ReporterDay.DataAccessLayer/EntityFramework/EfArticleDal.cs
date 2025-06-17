@@ -1,4 +1,5 @@
-﻿using ReporterDay.DataAccessLayer.Abstract;
+﻿using Microsoft.EntityFrameworkCore;
+using ReporterDay.DataAccessLayer.Abstract;
 using ReporterDay.DataAccessLayer.Context;
 using ReporterDay.DataAccessLayer.Repositories;
 using ReporterDay.EntityLayer.Entities;
@@ -17,10 +18,14 @@ namespace ReporterDay.DataAccessLayer.EntityFramework
         {
             _context = context;
         }
-
         public List<Article> GetArticlesByCategoryId1()
         {
             var values = _context.Articles.Where(x => x.CategoryId == 1).ToList();
+            return values;
+        }
+        public List<Article> GetArticlesWithAppUser()
+        {
+            var values = _context.Articles.ToList();
             return values;
         }
     }
