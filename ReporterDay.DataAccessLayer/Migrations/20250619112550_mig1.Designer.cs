@@ -12,8 +12,8 @@ using ReporterDay.DataAccessLayer.Context;
 namespace ReporterDay.DataAccessLayer.Migrations
 {
     [DbContext(typeof(ArticleContext))]
-    [Migration("20250617123126_mig3")]
-    partial class mig3
+    [Migration("20250619112550_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

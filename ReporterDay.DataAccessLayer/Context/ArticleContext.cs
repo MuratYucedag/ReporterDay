@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ReporterDay.DataAccessLayer.Context
 {
-    public class ArticleContext : DbContext
+    public class ArticleContext : IdentityDbContext<AppUser>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -28,5 +28,14 @@ namespace ReporterDay.DataAccessLayer.EntityFramework
             var values = _context.Articles.ToList();
             return values;
         }
+        public List<Article> GetArticlesWithCategories()
+        {
+            return _context.Articles.Include(x => x.Category).ToList();
+        }
+
+        public List<Article> GetArticlesWithCategoriesAndAppUsers()
+        {
+            return _context.Articles.Include(x => x.Category).Include(y => y.AppUser).ToList();
+        }
     }
 }
